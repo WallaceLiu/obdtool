@@ -1,0 +1,246 @@
+########################################################
+# 测试用例八                                            #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1000,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming
+# 数据时间：2015-11-19
+# ID：5737 - 5829
+# 共：93条
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，从中心区域出发
+# 2，围栏内（熄火10分钟）-
+# 3，返回中心区域（停留200秒以上）
+#
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 * 秒
+#
+# 注意：
+# 1）设置数据库时间为 2015-11-19
+# 2）设置windows服务器时间为 2015-11-19
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 表配置正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+echo 1-10
+send 5737
+wait 1
+send 5738
+wait 1
+send 5739
+wait 1
+send 5740
+wait 1
+send 5741
+wait 1
+send 5742
+wait 1
+send 5743
+wait 1
+send 5744
+wait 1
+send 5745
+wait 1
+send 5746
+wait 1
+
+echo 11-20
+send 5747
+wait 1
+send 5748
+wait 1
+send 5749
+wait 1
+send 5750
+wait 1
+send 5751
+wait 1
+send 5752
+wait 1
+send 5753
+wait 1
+send 5754
+wait 1
+send 5755
+wait 1
+send 5756
+wait 1
+
+echo 21-30
+send 5757
+wait 1
+send 5758
+wait 1
+send 5759
+wait 1
+send 5760
+wait 1
+send 5761
+wait 1
+send 5762
+wait 1
+send 5763
+wait 1
+send 5764
+wait 1
+send 5765
+wait 1
+send 5766
+wait 1
+
+echo 31-40
+send 5767
+wait 1
+send 5768
+wait 1
+send 5769
+wait 1
+send 5770
+wait 1
+send 5771
+wait 1
+send 5772
+wait 1
+send 5773
+wait 1
+send 5774
+wait 1
+send 5775
+wait 1
+send 5776
+wait 1
+
+echo 41-50
+send 5777
+wait 1
+# 熄火后消息，等待10分钟再发
+send 5778
+wait 600
+send 5779
+wait 1
+send 5780
+wait 1
+send 5781
+wait 1
+send 5782
+wait 1
+send 5783
+wait 1
+send 5784
+wait 1
+send 5785
+wait 1
+send 5786
+wait 1
+
+echo 51-60
+send 5787
+wait 1
+send 5788
+wait 1
+send 5789
+wait 1
+send 5790
+wait 1
+send 5791
+wait 1
+send 5792
+wait 1
+send 5793
+wait 1
+send 5794
+wait 1
+send 5795
+wait 1
+send 5796
+wait 1
+
+echo 61-70
+send 5797
+wait 1
+send 5798
+wait 1
+send 5799
+wait 1
+send 5800
+wait 1
+send 5801
+wait 1
+send 5802
+wait 1
+send 5803
+wait 1
+send 5804
+wait 1
+send 5805
+wait 1
+send 5806
+wait 1
+
+echo 71-80
+send 5807
+wait 1
+send 5808
+wait 1
+send 5809
+wait 1
+send 5810
+wait 1
+send 5811
+wait 1
+send 5812
+wait 1
+send 5813
+wait 1
+send 5814
+wait 1
+send 5815
+wait 1
+send 5816
+wait 1
+
+echo 81-90
+send 5817
+wait 1
+send 5818
+wait 1
+send 5819
+wait 1
+send 5820
+wait 1
+send 5821
+wait 1
+send 5822
+wait 1
+send 5823
+wait 1
+#echo 将发送熄火时...
+#send 5824
+#wait 1
+#echo 将发送熄火后...
+#send 5825
+#wait 1
+send 5826
+wait 1
+
+echo 91-100
+send 5827
+wait 1
+send 5828
+wait 1
+send 5829
+wait 200
+

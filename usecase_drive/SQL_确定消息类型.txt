@@ -1,0 +1,15 @@
+########################################################
+# 该 SQL 用于确定消息类型，便于测试
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1,200）
+########################################################
+
+SELECT 
+  t1.`MsgId`,
+  t1.`CmdId`,
+  t1.`CmdId`,
+  t1.`SubCmdId`
+FROM
+  tb_msg_cmd t1 
+  LEFT JOIN tb_base_history_15_11_19 t2 
+    ON (t1.`Id` = t2.`commandId`) 
+ORDER BY t1.`MsgId` ASC 

@@ -1,0 +1,208 @@
+########################################################
+# 测试用例九                                            #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1000,200）
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，从中心区域出发-
+# 2，围栏外（熄火10分钟以上）-
+# 3，返回围栏内（停留200秒以上）-
+# 4，返回中心区域（停留180秒以内）-
+# 5，围栏内（拔下OBD、连上OBD）-
+# 6，返回中心区域、进入地库，10分钟
+#
+########################################################
+
+echo 161-170
+send 5990
+wait 1
+send 5991
+wait 1
+send 5992
+wait 1
+send 5993
+wait 1
+send 5994
+wait 1
+send 5995
+wait 1
+send 5996
+wait 1
+send 5997
+wait 1
+send 5998
+wait 1
+send 5999
+wait 1
+
+echo 171-180
+send 6000
+wait 1
+send 6001
+wait 1
+send 6002
+wait 1
+send 6003
+wait 1
+send 6004
+wait 1
+send 6005
+wait 1
+send 6006
+wait 1
+send 6007
+wait 1
+send 6008
+wait 1
+send 6009
+wait 1
+
+echo 181-190
+send 6010
+wait 1
+send 6011
+wait 1
+send 6012
+wait 1
+send 6013
+wait 1
+send 6014
+wait 1
+send 6015
+wait 1
+send 6016
+wait 1
+send 6017
+wait 1
+send 6018
+wait 1
+echo 将发送拔下OBD报警...
+send 6019
+wait 10
+
+echo 将准备连接OBD...
+echo 191-200
+send 6020
+wait 1
+send 6021
+wait 1
+send 6022
+wait 1
+send 6023
+wait 1
+send 6024
+wait 1
+send 6025
+wait 1
+send 6026
+wait 1
+send 6027
+wait 1
+send 6028
+wait 1
+send 6029
+wait 1
+
+echo 201-210
+send 6030
+wait 1
+send 6031
+wait 1
+send 6032
+wait 1
+send 6033
+wait 1
+send 6034
+wait 1
+send 6035
+wait 1
+send 6036
+wait 1
+send 6037
+wait 1
+send 6038
+wait 1
+send 6039
+wait 1
+
+echo 211-220
+send 6040
+wait 1
+send 6041
+wait 1
+send 6042
+wait 1
+send 6043
+wait 1
+send 6044
+wait 1
+send 6045
+wait 1
+send 6046
+wait 1
+send 6047
+wait 1
+send 6048
+wait 1
+send 6049
+wait 1
+
+echo 221-230
+send 6050
+wait 1
+send 6051
+wait 1
+send 6052
+wait 1
+send 6053
+wait 1
+send 6054
+wait 1
+send 6055
+wait 1
+send 6056
+wait 1
+send 6057
+wait 1
+send 6058
+wait 1
+send 6059
+wait 1
+
+echo 231-240
+send 6060
+wait 1
+send 6061
+wait 1
+send 6062
+wait 1
+send 6063
+wait 1
+send 6064
+wait 1
+send 6065
+wait 1
+send 6066
+wait 1
+send 6067
+wait 1
+send 6068
+wait 1
+send 6069
+wait 1
+
+echo 241到结束
+send 6070
+wait 1
+send 6071
+wait 1
+send 6072
+wait 1
+send 6073
+echo 进入地库无消息将等到10分钟...生成试驾...
+wait 600

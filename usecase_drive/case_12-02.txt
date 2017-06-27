@@ -1,0 +1,167 @@
+########################################################
+# 测试用例十二                                          #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming
+# 数据时间：2015-11-19
+# ID：6264 - 6369
+# 共：106条
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，采集时间结束前开始驾驶-
+# 2，围栏外-
+# 3，拔下OBD-
+# 4，直到采集时间结束-
+# 5，拔下OBD-
+# 6，连上OBD-
+# 7，驾驶结束（熄火）
+#
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 * 秒
+#
+# 注意：
+# 1）设置数据库时间为 2015-11-19
+# 2）设置windows服务器时间为 2015-11-19
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 表配置正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+echo 51-60
+send 6314
+wait 1
+send 6315
+wait 1
+send 6316
+wait 1
+send 6317
+wait 1
+send 6318
+wait 1
+send 6319
+wait 1
+send 6320
+wait 1
+send 6321
+wait 1
+send 6322
+wait 1
+send 6323
+wait 1
+
+echo 61-70
+send 6324
+wait 1
+send 6325
+wait 1
+send 6326
+wait 1
+send 6327
+wait 1
+send 6328
+wait 1
+send 6329
+wait 1
+send 6330
+wait 1
+send 6331
+wait 1
+send 6332
+wait 1
+send 6333
+wait 1
+
+echo 71-80
+send 6334
+wait 1
+send 6335
+wait 1
+send 6336
+wait 1
+send 6337
+wait 1
+send 6338
+wait 1
+send 6339
+wait 1
+send 6340
+wait 1
+send 6341
+wait 1
+send 6342
+wait 1
+send 6343
+wait 1
+
+echo 81-90
+send 6344
+wait 1
+send 6345
+wait 1
+send 6346
+wait 1
+send 6347
+wait 1
+send 6348
+wait 1
+echo 将发送拔下OBD报警...
+send 6349
+wait 30
+
+send 6350
+wait 1
+send 6351
+wait 1
+send 6352
+wait 1
+send 6353
+wait 1
+
+echo 91-100
+send 6354
+wait 1
+send 6355
+wait 1
+send 6356
+wait 1
+send 6357
+wait 1
+send 6358
+wait 1
+send 6359
+wait 1
+send 6360
+wait 1
+send 6361
+wait 1
+send 6362
+wait 1
+send 6363
+wait 1
+
+echo 101-106
+send 6364
+wait 1
+send 6365
+wait 1
+echo 将发送熄火时...
+send 6366
+wait 1
+send 6367
+wait 1
+send 6368
+wait 1
+send 6369
+wait 1

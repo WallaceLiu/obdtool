@@ -1,0 +1,38 @@
+########################################################
+# 该 SQL 用于确定车辆位置，便于测试
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1,200）
+########################################################
+
+SELECT 
+  t1.`MsgId`,
+  t1.`CmdId`,
+  t1.`CmdId`,
+  t1.`SubCmdId`,
+  t2.`lng_baidu`,
+  t2.`lat_baidu`,
+  ROUND(
+    6378.138 * 2 * ASIN(
+      SQRT(
+        POW(
+          SIN(
+            (
+              39.983134 * PI() / 180- t2.lat_baidu * PI() / 180
+            ) / 2
+          ),
+          2
+        ) + COS(39.983134 * PI() / 180) * COS(t2.lat_baidu * PI() / 180) * POW(
+          SIN(
+            (
+              116.805743 * PI() / 180- t2.lng_baidu * PI() / 180
+            ) / 2
+          ),
+          2
+        )
+      )
+    ) * 1000
+  ) AS dis 
+FROM
+  tb_msg_cmd t1 
+  LEFT JOIN tb_base_history_15_11_19 t2 
+    ON (t1.`Id` = t2.`commandId`) 
+ORDER BY t1.`MsgId` ASC 

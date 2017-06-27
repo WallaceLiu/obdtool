@@ -1,0 +1,244 @@
+########################################################
+# 测试用例二十二                                            #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=512040428
+# VIN=LFPM4APPXG1A09777
+# （lng, lat, outer_r, inner_r）=（120.127536,30.336113,5000,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming_160411
+# 数据时间：2016-04-11
+# ID：
+# 共：条
+#
+########################################################
+# 数据库配置 app.conf
+########################################################
+#[biz_db]
+#host = 10.1.8.192
+#user = root
+#password = 123456
+#database = gps_base_data
+#
+#[src_msg_db]
+#host = 10.1.8.106
+#user = dev
+#password = 123456
+#database = qh_obd_msg_20160412
+#
+#[dest_msg_db]
+#host = 10.1.8.192
+#user = root
+#password = 123456
+#database = qh_obd_msg
+#
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，一直在大圈外
+########################################################
+# 期望                                              # 
+########################################################
+# 1，生成试驾
+# 2，生成超范围
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 * 秒
+#
+# 注意：
+# 1）设置数据库时间为 2016-04-11
+# 2）设置windows服务器时间为 2016-04-11
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 表配置正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+send 5283015
+wait 1
+send 5282887
+wait 1
+send 5282757
+wait 1
+send 5282249
+wait 1
+send 5281829
+wait 1
+send 5280929
+wait 1
+send 5276791
+wait 1
+send 5275161
+wait 1
+send 5275157
+wait 1
+send 5275151
+wait 1
+send 5275149
+wait 1
+send 5275147
+wait 1
+send 5275141
+wait 1
+send 5275131
+wait 1
+send 5275105
+wait 1
+send 5275087
+wait 1
+send 5275083
+wait 1
+send 5275075
+wait 1
+send 5275069
+wait 1
+send 5275065
+wait 1
+send 5275057
+wait 1
+send 5275053
+wait 1
+send 5275045
+wait 1
+send 5275041
+wait 1
+send 5275031
+wait 1
+send 5275033
+wait 1
+send 5275015
+wait 1
+send 5275009
+wait 1
+send 5274055
+wait 1
+send 5269201
+wait 1
+send 5268913
+wait 1
+send 5268911
+wait 1
+send 5268909
+wait 1
+send 5268905
+wait 1
+send 5268901
+wait 1
+send 5268897
+wait 1
+send 5268865
+wait 1
+send 5268843
+wait 1
+send 5268825
+wait 1
+send 5268817
+wait 1
+send 5268791
+wait 1
+send 5268777
+wait 1
+send 5268765
+wait 1
+send 5268749
+wait 1
+send 5268733
+wait 1
+send 5268731
+wait 1
+send 5268719
+wait 1
+send 5268715
+wait 1
+send 5268695
+wait 1
+send 5268693
+wait 1
+send 5268689
+wait 1
+send 5268687
+wait 1
+send 5268675
+wait 1
+send 5268673
+wait 1
+send 5268667
+wait 1
+send 5268653
+wait 1
+send 5268643
+wait 1
+send 5268637
+wait 1
+send 5268635
+wait 1
+send 5268627
+wait 1
+send 5268619
+wait 1
+send 5268613
+wait 1
+send 5268611
+wait 1
+send 5268603
+wait 1
+send 5268601
+wait 1
+send 5268583
+wait 1
+send 5268579
+wait 1
+send 5229433
+wait 1
+send 5229267
+wait 1
+send 5228999
+wait 1
+send 5228471
+wait 1
+send 5228225
+wait 1
+send 5228221
+wait 1
+send 5228217
+wait 1
+send 5228213
+wait 1
+send 5228207
+wait 1
+send 5228203
+wait 1
+send 5228199
+wait 1
+send 5228195
+wait 1
+send 5228193
+wait 1
+send 5228183
+wait 1
+send 5228181
+wait 1
+send 5228175
+wait 1
+send 5228171
+wait 1
+send 5228157
+wait 1
+send 5228153
+wait 1
+send 5228149
+wait 1
+send 5228147
+wait 1
+send 5228137
+wait 1
+send 5228135
+wait 1
+send 5227741
+wait 1
+

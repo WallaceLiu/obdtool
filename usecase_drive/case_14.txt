@@ -1,0 +1,272 @@
+########################################################
+# 测试用例十四                                          #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming
+# 数据时间：2015-11-19
+# ID：6400 - 6511
+# 共：112条
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，从中心区域外出发-
+# 2，中心区域-
+# 3，点火-
+# 4，行驶-
+# 5，熄火-
+# 6，点火-
+# 7，行驶-
+# 8，熄火-
+# 9，点火-
+# 10，行驶-
+# 11，熄火-
+# 12，点火-
+# 13，围栏内-
+# 14，返回中心区域（熄火）
+#
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 * 秒
+#
+# 注意：
+# 1）设置数据库时间为 2015-11-19
+# 2）设置windows服务器时间为 2015-11-19
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 表配置正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+send 6400
+wait 1
+send 6401
+wait 1
+send 6402
+wait 1
+send 6403
+wait 1
+send 6404
+wait 1
+send 6405
+wait 1
+send 6406
+wait 1
+send 6407
+wait 1
+send 6408
+wait 1
+send 6409
+wait 1
+send 6410
+wait 1
+send 6411
+wait 1
+send 6412
+wait 1
+send 6413
+wait 1
+send 6414
+wait 1
+send 6415
+wait 1
+send 6416
+wait 1
+send 6417
+wait 1
+send 6418
+wait 1
+send 6419
+wait 1
+send 6420
+wait 1
+send 6421
+wait 1
+send 6422
+wait 1
+send 6423
+wait 1
+send 6424
+wait 1
+send 6425
+wait 1
+send 6426
+wait 1
+send 6427
+wait 1
+send 6428
+wait 1
+send 6429
+wait 1
+send 6430
+wait 1
+send 6431
+wait 1
+send 6432
+wait 1
+send 6433
+wait 1
+send 6434
+wait 1
+send 6435
+wait 1
+send 6436
+wait 1
+send 6437
+wait 1
+send 6438
+wait 1
+send 6439
+wait 1
+send 6440
+wait 1
+send 6441
+wait 1
+send 6442
+wait 1
+send 6443
+wait 1
+send 6444
+wait 1
+send 6445
+wait 1
+send 6446
+wait 1
+send 6447
+wait 1
+send 6448
+wait 1
+send 6449
+wait 1
+send 6450
+wait 1
+send 6451
+wait 1
+send 6452
+wait 1
+send 6453
+wait 1
+send 6454
+wait 1
+send 6455
+wait 1
+send 6456
+wait 1
+send 6457
+wait 1
+send 6458
+wait 1
+send 6459
+wait 1
+send 6460
+wait 1
+send 6461
+wait 1
+send 6462
+wait 1
+send 6463
+wait 1
+send 6464
+wait 1
+send 6465
+wait 1
+send 6466
+wait 1
+send 6467
+wait 1
+send 6468
+wait 1
+send 6469
+wait 1
+send 6470
+wait 1
+send 6471
+wait 1
+send 6472
+wait 1
+send 6473
+wait 1
+send 6474
+wait 1
+send 6475
+wait 1
+send 6476
+wait 1
+send 6477
+wait 1
+send 6478
+wait 1
+send 6479
+wait 1
+send 6480
+wait 1
+send 6481
+wait 1
+send 6482
+wait 1
+send 6483
+wait 1
+send 6484
+wait 1
+send 6485
+wait 1
+send 6486
+wait 1
+send 6487
+wait 1
+send 6488
+wait 1
+send 6489
+wait 1
+send 6490
+wait 1
+send 6491
+wait 1
+send 6492
+wait 1
+send 6493
+wait 1
+send 6494
+wait 1
+send 6495
+wait 1
+send 6496
+wait 1
+send 6497
+wait 1
+send 6498
+wait 1
+send 6499
+wait 1
+send 6500
+wait 1
+send 6501
+wait 1
+send 6502
+wait 1
+send 6503
+wait 1
+send 6504
+wait 1
+send 6505
+wait 1
+send 6506
+wait 1
+send 6507
+wait 1
+send 6508
+wait 1
+send 6509
+wait 1
+send 6510
+wait 1
+send 6511
+wait 1

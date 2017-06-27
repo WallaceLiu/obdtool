@@ -1,0 +1,35 @@
+# 安装
+## 安装 mysql.connector
+http://dev.mysql.com/downloads/connector/python/
+选择相应的版本安装
+
+# app.conf 配置文件
+## 业务数据库
+[biz_db]
+host = 10.1.8.108
+user = root
+password = 123456
+database = gps_base_data_20160818
+
+## 源消息数据库
+[src_msg_db]
+host = 10.1.8.107
+user = dev
+password = 123456
+database = qh_obd_msg_192_151119_2
+
+## 目的模式，包括 tcp，db，both
+[dest_mode]
+mode=tcp
+
+## 目的数据库
+[dest_msg_db]
+host = 10.1.8.108
+user = root
+password = 123456
+database = scsj_qh_obd_msg_20160818
+
+## 网关
+[dest_gateway]
+ipaddr = 10.1.7.57
+port = 11000

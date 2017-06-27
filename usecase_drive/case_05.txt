@@ -1,0 +1,260 @@
+########################################################
+# 测试用例五                                            #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1000,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming
+# 数据时间：2015-11-19
+# ID：5260 - 5359
+# 共：100条
+########################################################
+# 用例描述                                              # 
+########################################################
+# 一直在中心区域
+# 1，点火
+# 2，行驶
+# 3，熄火
+# 4，点火
+# 5，行驶
+# 6，熄火
+# 
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 * 秒
+#
+# 注意：
+# 1）设置数据库时间为 2015-11-19
+# 2）设置windows服务器时间为 2015-11-19
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 表配置正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+echo 1-10
+send 5260
+wait 1
+send 5261
+wait 1
+send 5262
+wait 1
+send 5263
+wait 1
+send 5264
+wait 1
+send 5265
+wait 1
+send 5266
+wait 1
+send 5267
+wait 1
+send 5268
+wait 1
+send 5269
+wait 1
+
+echo 11-20
+send 5270
+wait 1
+send 5271
+wait 1
+send 5272
+wait 1
+send 5273
+wait 1
+send 5274
+wait 1
+send 5275
+wait 1
+send 5276
+wait 1
+send 5277
+wait 1
+send 5278
+wait 1
+send 5279
+wait 1
+
+echo 21-30
+send 5280
+wait 1
+send 5281
+wait 1
+send 5282
+wait 1
+send 5283
+wait 1
+send 5284
+wait 1
+send 5285
+wait 1
+send 5286
+wait 1
+send 5287
+wait 1
+send 5288
+wait 1
+send 5289
+wait 1
+
+echo 31-40
+send 5290
+wait 1
+send 5291
+wait 1
+send 5292
+wait 1
+send 5293
+wait 1
+send 5294
+wait 1
+send 5295
+wait 1
+send 5296
+wait 1
+send 5297
+wait 1
+send 5298
+wait 1
+send 5299
+wait 1
+
+echo 41-50
+send 5300
+wait 1
+send 5301
+wait 1
+send 5302
+wait 1
+send 5303
+wait 1
+send 5304
+wait 1
+send 5305
+wait 1
+send 5306
+wait 1
+send 5307
+wait 1
+send 5308
+wait 1
+send 5309
+wait 1
+
+echo 51-60
+send 5310
+wait 1
+send 5311
+wait 1
+send 5312
+wait 1
+send 5313
+wait 1
+send 5314
+wait 1
+send 5315
+wait 1
+send 5316
+wait 1
+send 5317
+wait 1
+send 5318
+wait 1
+send 5319
+wait 1
+
+echo 61-70
+send 5320
+wait 1
+send 5321
+wait 1
+send 5322
+wait 1
+send 5323
+wait 1
+send 5324
+wait 1
+send 5325
+wait 1
+send 5326
+wait 1
+send 5327
+wait 1
+send 5328
+wait 1
+send 5329
+wait 1
+
+echo 71-80
+send 5330
+wait 1
+send 5331
+wait 1
+send 5332
+wait 1
+send 5333
+wait 1
+send 5334
+wait 1
+send 5335
+wait 1
+send 5336
+wait 1
+send 5337
+wait 1
+send 5338
+wait 1
+send 5339
+wait 1
+
+echo 81-90
+send 5340
+wait 1
+send 5341
+wait 1
+send 5342
+wait 1
+send 5343
+wait 1
+send 5344
+wait 1
+send 5345
+wait 1
+send 5346
+wait 1
+send 5347
+wait 1
+send 5348
+wait 1
+send 5349
+wait 1
+
+echo 91-100
+send 5350
+wait 1
+send 5351
+wait 1
+send 5352
+wait 1
+send 5353
+wait 1
+send 5354
+wait 1
+send 5355
+wait 1
+send 5356
+wait 1
+send 5357
+wait 1
+send 5358
+wait 1
+send 5359
+

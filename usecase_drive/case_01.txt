@@ -1,0 +1,290 @@
+########################################################
+# 测试用例一                                            #
+########################################################
+# 设备和车辆标识                                        #
+########################################################
+# SN=505190024
+# VIN=LFBME3089FJB00393
+# （lng, lat, outer_r, inner_r）=（116.805743,39.983134,1000,200）
+########################################################
+# 采用数据                                              # 
+########################################################
+# 库：qh_obd_msg_192_151119_2
+# 表：incoming
+# 数据时间：2015-11-19
+# ID：6116 - 6223
+# 共：108条
+
+########################################################
+# 用例描述                                              # 
+########################################################
+# 1，采集时间外驾驶开始（打火）-
+# 2，拔下OBD-
+# 3，连上OBD-
+# 4，驾驶结束（熄火）
+#
+########################################################
+# 数据库配置 app.conf
+########################################################
+#[biz_db]
+#host = 10.1.8.192
+#user = root
+#password = 123456
+#database = gps_base_data
+#
+#[src_msg_db]
+#host = 10.1.8.107
+#user = dev
+#password = 123456
+#database = qh_obd_msg_192_151119_2
+#
+#[dest_msg_db]
+#host = 10.1.8.192
+#user = root
+#password = 123456
+#database = qh_obd_msg
+#
+########################################################
+########################################################
+# 发送描述                                              #
+########################################################
+# 
+# 1，持续 108 秒
+#
+# 注意：
+# 1）设置数据库时间
+# 2）设置windows服务器时间
+# 3）确保 gps_base_data.tb_mzdtestdri_general_info 值正确：
+#   a）STATISTIC_LASTTIME 值为 2015-11-19
+#   b）STATISTIC_STATUS   值为 1
+########################################################
+
+echo 1-10
+send 6116
+# wait 1
+send 6117
+# wait 1
+send 6118
+# wait 1
+send 6119
+# wait 1
+send 6120
+# wait 1
+send 6121
+# wait 1
+send 6122
+# wait 1
+send 6123
+# wait 1
+send 6124
+# wait 1
+send 6125
+# wait 1
+
+echo 11-20
+send 6126
+# wait 1
+send 6127
+# wait 1
+send 6128
+# wait 1
+send 6129
+# wait 1
+send 6130
+# wait 1
+send 6131
+# wait 1
+send 6132
+# wait 1
+send 6133
+# wait 1
+send 6134
+# wait 1
+send 6135
+# wait 1
+
+echo 21-30
+send 6136
+# wait 1
+send 6137
+# wait 1
+send 6138
+# wait 1
+send 6139
+# wait 1
+send 6140
+# wait 1
+send 6141
+# wait 1
+send 6142
+# wait 1
+send 6143
+# wait 1
+send 6144
+# wait 1
+send 6145
+# wait 1
+
+echo 31-40
+send 6146
+# wait 1
+send 6147
+# wait 1
+send 6148
+# wait 1
+send 6149
+# wait 1
+send 6150
+# wait 1
+send 6151
+# wait 1
+send 6152
+# wait 1
+send 6153
+# wait 1
+send 6154
+# wait 1
+send 6155
+# wait 1
+
+echo 41-50
+echo 将发送拔下OBD报警...
+send 6156
+wait 30
+
+send 6157
+# wait 1
+send 6158
+# wait 1
+send 6159
+# wait 1
+send 6160
+# wait 1
+send 6161
+# wait 1
+send 6162
+# wait 1
+send 6163
+# wait 1
+send 6164
+# wait 1
+send 6165
+# wait 1
+send 6166
+# wait 1
+send 6167
+# wait 1
+send 6168
+# wait 1
+send 6169
+# wait 1
+send 6170
+# wait 1
+send 6171
+# wait 1
+send 6172
+# wait 1
+send 6173
+# wait 1
+send 6174
+# wait 1
+send 6175
+# wait 1
+send 6176
+# wait 1
+send 6177
+# wait 1
+send 6178
+# wait 1
+send 6179
+# wait 1
+send 6180
+# wait 1
+send 6181
+# wait 1
+send 6182
+# wait 1
+send 6183
+# wait 1
+send 6184
+# wait 1
+send 6185
+# wait 1
+send 6186
+# wait 1
+send 6187
+# wait 1
+send 6188
+# wait 1
+send 6189
+# wait 1
+send 6190
+# wait 1
+send 6191
+# wait 1
+send 6192
+# wait 1
+send 6193
+# wait 1
+send 6194
+# wait 1
+send 6195
+# wait 1
+send 6196
+# wait 1
+send 6197
+# wait 1
+send 6198
+# wait 1
+send 6199
+# wait 1
+send 6200
+# wait 1
+send 6201
+# wait 1
+send 6202
+# wait 1
+send 6203
+# wait 1
+send 6204
+# wait 1
+send 6205
+# wait 1
+send 6206
+# wait 1
+send 6207
+# wait 1
+send 6208
+# wait 1
+send 6209
+# wait 1
+send 6210
+# wait 1
+send 6211
+# wait 1
+send 6212
+# wait 1
+send 6213
+# wait 1
+send 6214
+# wait 1
+send 6215
+# wait 1
+send 6216
+# wait 1
+send 6217
+# wait 1
+send 6218
+# wait 1
+send 6219
+# wait 1
+send 6220
+# wait 1
+send 6221
+# wait 1
+send 6222
+# wait 1
+send 6223
+# wait 1
+
+
